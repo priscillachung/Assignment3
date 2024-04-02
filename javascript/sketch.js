@@ -3,6 +3,7 @@ let fonts = [];
 let gradientColors = []; 
 let currentColorIndex = 0;
 let currentFontIndex = 0;
+let scrollCounter = 0;
 
 function preload() {
     fonts.push (loadFont('assets/tbf.otf'));
@@ -26,7 +27,14 @@ function setup() {
 
 function mouseWheel(event) {
 
-    if (event.delta > 0) {
+    scrollCounter++;
+
+    if (scrollCounter % 10 === 0){
+        currentFontIndex = (currentFontIndex + 1) % fonts.length;
+        currentColorIndex = (currentColorIndex + 1) % gradientColors.length;
+    }
+    
+    /* if (event.delta > 0) {
         currentColorIndex = (currentColorIndex + 1) % gradientColors.length;
     } else {
         currentColorIndex = (currentColorIndex - 1 + gradientColors.length) % gradientColors.length;
@@ -36,7 +44,7 @@ function mouseWheel(event) {
         currentFontIndex = (currentFontIndex + 1) % fonts.length;
     } else {
         currentFontIndex = (currentFontIndex - 1 + fonts.length) % fonts.length;
-    }
+    } */
 
     return false;
 
