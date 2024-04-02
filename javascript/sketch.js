@@ -5,8 +5,8 @@ let currentColorIndex = 0;
 let currentFontIndex = 0;
 
 function preload() {
-    fonts.push (loadFont('../assets/tbf.otf'));
-    fonts.push (loadFont('../assets/Imbue.ttf'));
+    fonts.push (loadFont('assets/tbf.otf'));
+    fonts.push (loadFont('assets/Imbue.ttf'));
     fonts.push (loadFont('assets/RobotoMedium.ttf'));
     fonts.push (loadFont('assets/RubikScribble.ttf'));
 }
