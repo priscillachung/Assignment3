@@ -25,6 +25,7 @@ function setup() {
 }
 
 function mouseWheel(event) {
+
     if (event.delta > 0) {
         currentColorIndex = (currentColorIndex + 1) % gradientColors.length;
     } else {
@@ -55,6 +56,7 @@ function drawWords() {
     fill(0);
     let quote = '"Your choice of typeface is as important as what you do with it" - Bonnie Siegler';
     let wrappingWidth = windowWidth / 2;
+    rectMode(CENTER)
     textFont(fonts[currentFontIndex]);
     textAlign(CENTER, CENTER);
     text(quote, windowWidth / 2, windowHeight / 2, wrappingWidth);
