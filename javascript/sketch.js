@@ -24,6 +24,10 @@ function preload() {
     fonts.push (loadFont('assets/Muthiara.otf'));
     fonts.push (loadFont('assets/Starborn.otf'));
     fonts.push (loadFont('assets/Winter Memories.otf'));
+    fonts.push (loadFont('assets/BrokenGlass.otf'));
+    fonts.push (loadFont('assets/typewriter.otf'));
+    fonts.push (loadFont('assets/Mercado.otf'));
+    fonts.push (loadFont('assets/varsity.ttf'));
 }
 
 function setup() {
