@@ -7,11 +7,6 @@ let scrollCounter = 0;
 let rotationAngle = 0;
 let scrollUpCounter = 0;
 let scrollDownCounter = 0;
-
-let scrollBarHeight;
-let scrollBarWidth = 20;
-let scrollBarPosition = 0;
-
 let scrollingStarted = false;
 
 function preload() {
@@ -39,7 +34,6 @@ function setup() {
     gradientColors.push(color(97, 218, 255));
     gradientColors.push(color(115, 190, 255));
     gradientColors.push(color(115, 255, 194));
-    gradientColors.push(color(204, 255, 115));
     gradientColors.push(color(248, 255, 115));
     gradientColors.push(color(255, 185, 115));
     gradientColors.push(color(255, 115, 115));
@@ -112,6 +106,8 @@ function draw() {
     setGradient(0, 0, windowWidth, windowHeight, currentColor, nextColor);
 
     if (scrollingStarted) {
+        push();
+        translate(windowWidth / 2, windowHeight / 2);
         translate(50, height - 50);
         rotate(rotationAngle);
         rectMode(CENTER);
@@ -145,6 +141,14 @@ function draw() {
         rect(50, 50, 800, 800);
 
         translate(5, height - 10);
+        rotate(rotationAngle);
+        rectMode(CENTER);
+        noFill();
+        stroke(255);
+        strokeWeight(2);
+        rect(50, 50, 800, 800);
+
+        translate(10, height - 10);
         rotate(rotationAngle);
         rectMode(CENTER);
         noFill();
